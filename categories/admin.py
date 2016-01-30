@@ -33,6 +33,7 @@ class CategoryAdminForm(CategoryBaseAdminForm):
     class Meta:
         model = Category
         fields = '__all__'
+        exclude = ()
 
     def clean_alternate_title(self):
         if self.instance is None or not self.cleaned_data['alternate_title']:
